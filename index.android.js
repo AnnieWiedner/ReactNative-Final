@@ -50,4 +50,5 @@ const styles = StyleSheet.create({
   },
 });
 
+
 AppRegistry.registerComponent('final', () => final);

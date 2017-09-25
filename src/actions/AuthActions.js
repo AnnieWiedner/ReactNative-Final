@@ -56,7 +56,7 @@ const registerUserSuccess = (dispatch, user) => {
     type: REGISTER_USER_SUCCESS,
     payload: user
   });
-  Actions.house();
+  // Actions.house();
 }
 
 

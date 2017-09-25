@@ -41,6 +41,16 @@ class LoginForm extends Component {
   render() {
     return (
       <Box>
+
+        <BoxSection>
+          <Text style={styles.headerStyle}>Room & Board</Text>
+        </BoxSection>
+
+        <BoxSection>
+          <Text style={styles.subheaderStyle}>Login</Text>
+        </BoxSection>
+
+
         <BoxSection>
         <Input
           label="Email"
@@ -80,6 +90,21 @@ class LoginForm extends Component {
 }
 
 const styles = {
+  headerStyle: {
+    fontSize: 24,
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontWeight: '700',
+    flex: 1
+  },
+  subheaderStyle: {
+    fontSize: 20,
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontWeight: '300',
+    flex: 1,
+    marginBottom: 30
+  },
   errorTextStyle: {
     fontSize: 16,
     alignSelf: 'center',

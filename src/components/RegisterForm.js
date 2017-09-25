@@ -38,6 +38,15 @@ class RegisterForm extends Component {
   render() {
     return (
       <Box>
+
+        <BoxSection>
+          <Text style={styles.headerStyle}>Room & Board</Text>
+        </BoxSection>
+
+        <BoxSection>
+          <Text style={styles.subheaderStyle}>Register</Text>
+        </BoxSection>
+
         <BoxSection>
         <Input
           label="Email"
@@ -56,7 +65,9 @@ class RegisterForm extends Component {
         />
         </BoxSection>
 
-        <Text style={styles.errorTextStyle}>{this.props.error}</Text>
+        <BoxSection>
+          <Text style={styles.errorTextStyle}>{this.props.error}</Text>
+        </BoxSection>
 
         <BoxSection>
           {this.renderButton()}
@@ -76,11 +87,27 @@ class RegisterForm extends Component {
 }
 
 const styles = {
+  headerStyle: {
+    fontSize: 24,
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontWeight: '700',
+    flex: 1
+  },
+  subheaderStyle: {
+    fontSize: 20,
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontWeight: '300',
+    flex: 1,
+    marginBottom: 30
+  },
   errorTextStyle: {
     fontSize: 16,
     alignSelf: 'center',
     color: 'red',
-    paddingTop: 5
+    textAlign: 'center',
+    flex: 1,
   }
 }
 

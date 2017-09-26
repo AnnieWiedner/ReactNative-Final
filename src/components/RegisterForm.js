@@ -40,7 +40,7 @@ class RegisterForm extends Component {
       <Box>
 
         <BoxSection>
-          <Text style={styles.headerStyle}>Room & Board</Text>
+          <Text style={styles.headerStyle}>Mind Boggle</Text>
         </BoxSection>
 
         <BoxSection>

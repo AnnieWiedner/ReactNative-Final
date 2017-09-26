@@ -56,7 +56,7 @@ const registerUserSuccess = (dispatch, user) => {
     type: REGISTER_USER_SUCCESS,
     payload: user
   });
-  // Actions.house();
+  Actions.categoryList();
 }
 
 
@@ -69,7 +69,7 @@ const loginUserSuccess = (dispatch, user) => {
     type: LOGIN_USER_SUCCESS,
     payload: user
   });
-  Actions.main();
+  Actions.categoryList();
 };
 
 

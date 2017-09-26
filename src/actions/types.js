@@ -12,3 +12,7 @@ export const REGISTER_USER = 'register_user';
 
 export const GO_TO_REGISTER = 'go_to_register';
 export const GO_TO_LOGIN = 'go_to_login';
+
+export const CATEGORY_UPDATE = 'category_update';
+export const CATEGORY_CREATE = 'category_create';
+export const CATEGORIES_FETCH_SUCCESS = 'categories_fetch_success'; 

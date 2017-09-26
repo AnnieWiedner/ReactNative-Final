@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput, View, Text } from 'react-native';
 
-const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
+const LargerInput = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
   const { inputStyle, containerStyle } = styles;
 
   return (
@@ -13,6 +13,8 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => 
         style={inputStyle}
         value={value}
         onChangeText={onChangeText}
+        multiline={true}
+        textAlignVertical={'top'}
       />
     </View>
   );
@@ -23,12 +25,13 @@ const styles = {
     color: '#000',
     paddingRight: 5,
     paddingLeft: 5,
-    fontSize: 18,
-    lineHeight: 23,
+    fontSize: 16,
+    lineHeight: 30,
+    height: 80,
     flex: 1,
   },
   containerStyle: {
-    height: 40,
+    height: 80,
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -36,4 +39,4 @@ const styles = {
   }
 };
 
-export { Input };
+export { LargerInput };

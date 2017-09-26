@@ -37,9 +37,7 @@ class CategoryList extends Component {
         <BoxSection>
           <Text style={styles.headerStyle}>Categories</Text>
         </BoxSection>
-        <BoxSection>
-          <Button onPress={() => Actions.categoryCreate()}>New Category</Button>
-        </BoxSection>
+
         <BoxSection>
         </BoxSection>
         <ListView
@@ -47,6 +45,9 @@ class CategoryList extends Component {
           dataSource={this.dataSource}
           renderRow={this.renderRow}
         />
+        <BoxSection>
+          <Button onPress={() => Actions.categoryCreate()}>New Category</Button>
+        </BoxSection>
 
       </View>
     )

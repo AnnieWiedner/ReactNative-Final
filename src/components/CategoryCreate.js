@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { categoryUpdate, categoryCreate } from '../actions'
-import { View, Text } from 'react-native';
-import { Box, BoxSection, Input, Button, LargerInput } from './common'
+import { View, Text, Picker, Item } from 'react-native';
+import { Box, BoxSection, Input, Button, LargerInput, CancelButton } from './common'
+import { Actions } from 'react-native-router-flux';
+import ModalDropdown from 'react-native-modal-dropdown';
+
+
 
 class CategoryCreate extends Component {
   onButtonPress() {
@@ -13,9 +17,11 @@ class CategoryCreate extends Component {
   render() {
     return (
       <Box>
+
         <BoxSection>
           <Text style={styles.headerStyle}>Create New</Text>
         </BoxSection>
+
         <BoxSection>
         <Input
           label="Name"
@@ -24,6 +30,7 @@ class CategoryCreate extends Component {
           onChangeText={value => this.props.categoryUpdate({ prop: 'name', value })}
         />
         </BoxSection>
+
         <BoxSection>
         <LargerInput
           label="Description"
@@ -32,11 +39,21 @@ class CategoryCreate extends Component {
           onChangeText={value => this.props.categoryUpdate({ prop: 'description', value })}
         />
         </BoxSection>
+
+
+
         <BoxSection>
           <Button onPress={this.onButtonPress.bind(this)}>
             Create
           </Button>
         </BoxSection>
+
+        <BoxSection>
+          <CancelButton onPress={() => Actions.categoryList()}>
+            Cancel
+          </CancelButton>
+        </BoxSection>
+
       </Box>
 
     )
@@ -50,7 +67,6 @@ const styles = {
     fontWeight: '700',
     flex: 1,
     paddingBottom: 20,
-    color: 'red',
   },
 
 }

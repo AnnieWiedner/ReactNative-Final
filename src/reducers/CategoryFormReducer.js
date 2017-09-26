@@ -5,7 +5,7 @@ import {
 
 const INITIAL_STATE = {
   name: '',
-  description: ''
+  description: '',
 };
 
 export default (state = INITIAL_STATE, action) => {
